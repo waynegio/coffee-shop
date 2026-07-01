@@ -27,7 +27,7 @@ export default function About() {
   ];
 
   return (
-    <main className="min-h-screen bg-sand-100 text-sand-900">
+    <main className="min-h-screen bg-sand-100 text-sand-900 pt-28">
       {/* Brand Intro & Story Section */}
       <section className="grid grid-cols-1 lg:grid-cols-2 border-b border-sand-200/60">
         {/* Left Content Column */}

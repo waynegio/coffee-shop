@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main className="bg-sand-100 text-sand-900 min-h-screen">
       {/* Hero Section - Asymmetrical Split Layout */}
-      <section className="relative max-w-6xl mx-auto px-6 pt-12 pb-20 md:py-28 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <section className="relative max-w-6xl mx-auto px-6 pt-28 pb-20 md:py-28 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         {/* Left Side: Editorial Typography & Copy */}
         <div className="lg:col-span-7 flex flex-col gap-6 text-left">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-leaf-100/50 border border-leaf-200/35 w-fit">
