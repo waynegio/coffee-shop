@@ -23,8 +23,6 @@ export default function Product() {
 
   return (
     <main className="min-h-screen bg-sand-100 text-sand-900 pt-28">
-
-      {/* Filter Options */}
       <section className="py-6 px-6 border-b border-sand-200/80 bg-sand-100">
         <div className="max-w-6xl mx-auto flex flex-wrap justify-center gap-3 md:gap-4">
           {categories.map((cat) => (
@@ -42,8 +40,6 @@ export default function Product() {
           ))}
         </div>
       </section>
-
-      {/* Product Display Grid */}
       <section className="py-16 px-6 max-w-6xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {filteredProducts.map((item, idx) => (
@@ -51,7 +47,6 @@ export default function Product() {
               key={idx}
               className="bg-white border border-sand-200 rounded-2xl overflow-hidden shadow-xs hover:border-leaf-500/30 hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 flex flex-col h-full group"
             >
-              {/* Product Thumbnail */}
               <div className="relative h-56 overflow-hidden bg-sand-200">
                 <img
                   src={item.image}
@@ -66,8 +61,6 @@ export default function Product() {
                   {item.type}
                 </span>
               </div>
-
-              {/* Product Information */}
               <div className="p-6 flex flex-col flex-grow gap-3">
                 <div className="flex flex-col gap-1">
                   <h3 className="font-serif text-lg font-bold text-sand-900 group-hover:text-leaf-800 transition-colors">

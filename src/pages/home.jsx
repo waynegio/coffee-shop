@@ -4,9 +4,7 @@ import { ArrowRight, Coffee, Heart, Compass, Sparkles } from "lucide-react";
 export default function Home() {
   return (
     <main className="bg-sand-100 text-sand-900 min-h-screen">
-      {/* Hero Section - Asymmetrical Split Layout */}
       <section className="relative max-w-6xl mx-auto px-6 pt-28 pb-20 md:py-28 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        {/* Left Side: Editorial Typography & Copy */}
         <div className="lg:col-span-7 flex flex-col gap-6 text-left">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-leaf-100/50 border border-leaf-200/35 w-fit">
             <span className="w-2 h-2 rounded-full bg-leaf-650 animate-pulse"></span>
@@ -41,7 +39,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Right Side: Elegant Photographic Panel */}
         <div className="lg:col-span-5 relative w-full h-[350px] md:h-[500px]">
           <div className="absolute inset-4 border border-leaf-500/20 rounded-3xl translate-x-2 translate-y-2 z-0"></div>
           <div className="relative z-10 w-full h-full rounded-3xl overflow-hidden shadow-xl border border-sand-200">
@@ -52,7 +49,6 @@ export default function Home() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-sand-900/20 via-transparent to-transparent"></div>
           </div>
-          {/* Accent Rating Badge */}
           <div className="absolute -bottom-4 -left-4 z-20 bg-white border border-sand-200 p-4 rounded-2xl shadow-lg flex items-center gap-3">
             <div className="p-2.5 bg-leaf-50 text-leaf-800 rounded-lg">
               <Coffee size={20} />
@@ -64,8 +60,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Feature Section - Clean Cards */}
       <section className="py-24 px-6 bg-white border-t border-b border-sand-200/60">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col items-center text-center mb-16 gap-2">
@@ -75,7 +69,6 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Feature 1 */}
             <div className="bg-sand-50/50 border border-sand-200 p-8 rounded-2xl flex flex-col gap-5 hover:border-leaf-500/30 hover:shadow-lg transition-all duration-300 group">
               <div className="w-12 h-12 rounded-xl bg-leaf-50 text-leaf-800 border border-leaf-100 flex items-center justify-center group-hover:bg-leaf-800 group-hover:text-white transition-colors duration-300">
                 <Coffee size={22} />
@@ -85,8 +78,6 @@ export default function Home() {
                 Every cup is prepared by coffee enthusiasts who understand bean profiles and brewing precision.
               </p>
             </div>
-
-            {/* Feature 2 */}
             <div className="bg-sand-50/50 border border-sand-200 p-8 rounded-2xl flex flex-col gap-5 hover:border-leaf-500/30 hover:shadow-lg transition-all duration-300 group">
               <div className="w-12 h-12 rounded-xl bg-leaf-50 text-leaf-800 border border-leaf-100 flex items-center justify-center group-hover:bg-leaf-800 group-hover:text-white transition-colors duration-300">
                 <Heart size={22} />
@@ -96,8 +87,6 @@ export default function Home() {
                 Quiet corners, soft instrumental music, and relaxing lighting designed to put your mind at ease.
               </p>
             </div>
-
-            {/* Feature 3 */}
             <div className="bg-sand-50/50 border border-sand-200 p-8 rounded-2xl flex flex-col gap-5 hover:border-leaf-500/30 hover:shadow-lg transition-all duration-300 group">
               <div className="w-12 h-12 rounded-xl bg-leaf-50 text-leaf-800 border border-leaf-100 flex items-center justify-center group-hover:bg-leaf-800 group-hover:text-white transition-colors duration-300">
                 <Compass size={22} />
@@ -110,8 +99,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Narrative Section - Large Banner Image */}
       <section className="py-24 px-6 max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6 rounded-3xl overflow-hidden h-[300px] md:h-[400px] shadow-lg border border-sand-200">

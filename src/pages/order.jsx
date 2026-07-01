@@ -20,13 +20,11 @@ export default function Order() {
 
   const receiptRef = useRef(null);
 
-  // Sync state with query parameter for initial redirect
   useEffect(() => {
     if (productParam) {
       const match = products.find((p) => p.name === productParam);
       if (match) {
         setCart((prev) => {
-          // Check if item is already in cart
           const exists = prev.find((item) => item.name === match.name);
           if (exists) return prev;
           return [...prev, { name: match.name, price: match.price, qty: 1, image: match.image }];
@@ -35,7 +33,6 @@ export default function Order() {
     }
   }, [productParam]);
 
-  // Cart operations
   const addToCart = (productObj) => {
     setCart((prev) => {
       const exists = prev.find((item) => item.name === productObj.name);
@@ -70,7 +67,6 @@ export default function Order() {
     return found ? found.qty : 0;
   };
 
-  // Calculations
   const grandTotal = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
 
   const formatRupiah = (val) => "Rp " + val.toLocaleString("id-ID");
@@ -126,7 +122,6 @@ export default function Order() {
     setCart([]);
   }
 
-  // Scroll to receipt
   useEffect(() => {
     if (receipt && receiptRef.current) {
       receiptRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -136,7 +131,6 @@ export default function Order() {
   return (
     <main className="min-h-screen bg-sand-100 pt-28 pb-20 px-4 md:px-8">
       <div className="max-w-6xl mx-auto flex flex-col gap-12">
-        {/* Page Header */}
         <div className="text-center flex flex-col items-center gap-2">
           <span className="text-xs uppercase tracking-widest text-leaf-700 font-bold flex items-center gap-1.5 bg-leaf-100/50 px-3 py-1 rounded-full border border-leaf-200/35">
             <Sparkles size={11} className="text-leaf-800" />
@@ -148,9 +142,7 @@ export default function Order() {
           <div className="w-12 h-0.5 bg-leaf-500 mt-2"></div>
         </div>
 
-        {/* Main Grid Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          {/* LEFT: Product Grid Selector (7 Cols) */}
           <div className="lg:col-span-7 bg-white rounded-3xl p-6 md:p-8 border border-sand-200 shadow-md shadow-sand-200/30 flex flex-col gap-6">
             <div className="flex flex-col gap-1">
               <h3 className="font-serif text-lg font-bold text-sand-900">
@@ -161,7 +153,6 @@ export default function Order() {
               </p>
             </div>
 
-            {/* Grid Category Tabs */}
             <div className="flex flex-wrap gap-2 pb-2 border-b border-sand-200/60">
               {["all", "coffee", "non", "food", "snack"].map((cat) => (
                 <button
@@ -179,7 +170,6 @@ export default function Order() {
               ))}
             </div>
 
-            {/* Product Cards Selector Scroll */}
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 max-h-[460px] overflow-y-auto pr-2">
               {filteredProducts.map((p) => {
                 const qtyInCart = getItemQty(p.name);
@@ -209,7 +199,6 @@ export default function Order() {
                       <span className="text-[10px] font-bold text-leaf-800">{formatRupiah(p.price)}</span>
                     </div>
 
-                    {/* Card quantity controls */}
                     <div className="mt-auto pt-2">
                       {hasItem ? (
                         <div className="flex items-center justify-between bg-leaf-800 text-white rounded-lg p-1">
@@ -245,9 +234,7 @@ export default function Order() {
             </div>
           </div>
 
-          {/* RIGHT: Order Summary & Form (5 Cols) */}
           <div className="lg:col-span-5 flex flex-col gap-6">
-            {/* Basket Items List */}
             <div className="bg-white rounded-3xl p-6 md:p-8 border border-sand-200 shadow-md shadow-sand-200/30 flex flex-col gap-5">
               <div className="flex items-center justify-between border-b border-sand-100 pb-3">
                 <h3 className="font-serif text-base font-bold text-sand-900 flex items-center gap-2">
@@ -265,7 +252,6 @@ export default function Order() {
                 </div>
               ) : (
                 <div className="flex flex-col gap-4">
-                  {/* Cart Item Row List */}
                   <div className="flex flex-col gap-3 max-h-[220px] overflow-y-auto pr-1">
                     {cart.map((item) => (
                       <div key={item.name} className="flex justify-between items-center gap-3 bg-sand-50/30 p-2.5 rounded-xl border border-sand-200/40">
@@ -286,7 +272,6 @@ export default function Order() {
                           </div>
                         </div>
 
-                        {/* Adjuster / Delete */}
                         <div className="flex items-center gap-2">
                           <div className="flex items-center bg-sand-100 border border-sand-200/50 rounded-lg p-0.5 scale-90">
                             <button
@@ -318,7 +303,6 @@ export default function Order() {
                     ))}
                   </div>
 
-                  {/* Total display box */}
                   <div className="pt-4 border-t border-sand-100 flex justify-between items-center">
                     <span className="text-xs font-bold text-sand-700 uppercase tracking-wider">Grand Total</span>
                     <span className="font-serif text-xl font-black text-honey-600">
@@ -329,7 +313,6 @@ export default function Order() {
               )}
             </div>
 
-            {/* Delivery Form */}
             <form
               onSubmit={handleOrder}
               className="bg-white rounded-3xl p-6 md:p-8 border border-sand-200 shadow-md shadow-sand-200/30 flex flex-col gap-5"
@@ -338,7 +321,6 @@ export default function Order() {
                 2. Shipping & Contact Details
               </h3>
 
-              {/* Full Name */}
               <div className="flex flex-col gap-1.5">
                 <label htmlFor="fullName" className="text-[10px] font-bold uppercase tracking-wider text-sand-700 flex items-center gap-1.5">
                   <User size={12} className="text-leaf-800" />
@@ -360,7 +342,6 @@ export default function Order() {
                 {nameError && <p className="text-red-500 text-[10px] mt-0.5 font-semibold">{nameError}</p>}
               </div>
 
-              {/* Email */}
               <div className="flex flex-col gap-1.5">
                 <label htmlFor="email" className="text-[10px] font-bold uppercase tracking-wider text-sand-700 flex items-center gap-1.5">
                   <Mail size={12} className="text-leaf-800" />
@@ -378,7 +359,6 @@ export default function Order() {
                 />
               </div>
 
-              {/* Phone */}
               <div className="flex flex-col gap-1.5">
                 <label htmlFor="phone" className="text-[10px] font-bold uppercase tracking-wider text-sand-700 flex items-center gap-1.5">
                   <Phone size={12} className="text-leaf-800" />
@@ -400,7 +380,6 @@ export default function Order() {
                 {phoneError && <p className="text-red-500 text-[10px] mt-0.5 font-semibold">{phoneError}</p>}
               </div>
 
-              {/* Address */}
               <div className="flex flex-col gap-1.5">
                 <label htmlFor="address" className="text-[10px] font-bold uppercase tracking-wider text-sand-700 flex items-center gap-1.5">
                   <MapPin size={12} className="text-leaf-800" />
@@ -418,7 +397,6 @@ export default function Order() {
                 ></textarea>
               </div>
 
-              {/* Submit Button */}
               <button
                 type="submit"
                 disabled={cart.length === 0}
@@ -434,7 +412,6 @@ export default function Order() {
           </div>
         </div>
 
-        {/* Order Receipt section */}
         {receipt && (
           <section
             ref={receiptRef}
@@ -453,7 +430,6 @@ export default function Order() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Customer Info Card */}
               <div className="flex flex-col gap-4 bg-sand-50/50 p-6 rounded-2xl border border-sand-200/50">
                 <h3 className="font-serif text-base font-bold text-sand-900 flex items-center gap-2">
                   <User size={16} className="text-leaf-800" />
@@ -482,7 +458,6 @@ export default function Order() {
                 </ul>
               </div>
 
-              {/* Order Details Card */}
               <div className="flex flex-col gap-4 bg-sand-50/50 p-6 rounded-2xl border border-sand-200/50">
                 <h3 className="font-serif text-base font-bold text-sand-900 flex items-center gap-2">
                   <ReceiptText size={16} className="text-leaf-800" />
@@ -490,7 +465,6 @@ export default function Order() {
                 </h3>
                 <div className="w-full h-px bg-sand-200/70"></div>
                 
-                {/* Table of items ordered */}
                 <div className="flex flex-col gap-2.5">
                   {receipt.items.map((item) => (
                     <div key={item.name} className="flex justify-between text-xs text-sand-900">
@@ -520,7 +494,6 @@ export default function Order() {
                 </p>
               </div>
 
-              {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-3 mt-2 w-full max-w-md justify-center">
                 <button
                   type="button"

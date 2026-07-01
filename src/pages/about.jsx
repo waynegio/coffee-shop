@@ -28,9 +28,7 @@ export default function About() {
 
   return (
     <main className="min-h-screen bg-sand-100 text-sand-900 pt-28">
-      {/* Brand Intro & Story Section */}
       <section className="grid grid-cols-1 lg:grid-cols-2 border-b border-sand-200/60">
-        {/* Left Content Column */}
         <div className="flex flex-col justify-center py-20 px-8 md:px-16 lg:px-20 bg-sand-100 gap-6">
           <div className="flex items-center gap-2">
             <div className="flex text-honey-500">
@@ -59,8 +57,6 @@ export default function About() {
             Whether you are looking to catch up on work, spend a quiet moment with a book, or enjoy traditional Indonesian and Western cuisines with family and friends, we have curated a relaxing space just for you.
           </p>
         </div>
-
-        {/* Right Showcase Image Column */}
         <div className="relative min-h-[350px] lg:min-h-[550px] bg-sand-200">
           <img
             src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?auto=format&fit=crop&w=1200&q=80"
@@ -69,8 +65,6 @@ export default function About() {
           />
         </div>
       </section>
-
-      {/* Find Us & Franchise Locations Section */}
       <section className="py-24 px-6 md:px-12 bg-sand-50/60">
         <div className="max-w-6xl mx-auto flex flex-col gap-16">
           <div className="text-center flex flex-col items-center gap-2">
@@ -80,7 +74,6 @@ export default function About() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Map Address Card */}
             <div className="bg-white border border-sand-200 p-8 rounded-2xl flex flex-col gap-6 shadow-xs">
               <div className="flex items-start gap-4">
                 <div className="p-3.5 bg-leaf-50 rounded-xl text-leaf-800 border border-leaf-100/50">
@@ -103,8 +96,6 @@ export default function About() {
                 OPEN IN GOOGLE MAPS
               </a>
             </div>
-
-            {/* Franchise List */}
             <div className="flex flex-col gap-6">
               <h3 className="font-serif text-xl font-bold text-sand-900 tracking-wide">
                 Our Franchise Network
@@ -138,8 +129,6 @@ export default function About() {
               </div>
             </div>
           </div>
-
-          {/* Social / Contact Grid */}
           <div className="border-t border-sand-200 pt-16">
             <h3 className="font-serif text-xl text-center text-sand-900 font-bold mb-10 tracking-wide">
               Direct Contact Channels
