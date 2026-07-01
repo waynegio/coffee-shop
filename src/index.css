@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Satisfy&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Montserrat', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+  --font-cursive: 'Satisfy', cursive;
+  
+  /* Rich Forest/Emerald Green (representing 'Daun') */
+  --color-leaf-50: #f4f8f6;
+  --color-leaf-100: #e5f0eb;
+  --color-leaf-200: #cbe0d6;
+  --color-leaf-500: #14532d;
+  --color-leaf-600: #15803d;
+  --color-leaf-700: #166534;
+  --color-leaf-800: #14532d;
+  --color-leaf-900: #123e24;
+  --color-leaf-950: #061c10;
+  
+  /* Warm Honey/Amber (representing Teak wood 'Jati') */
+  --color-honey-50: #fffbeb;
+  --color-honey-100: #fef3c7;
+  --color-honey-200: #fde68a;
+  --color-honey-300: #fcd34d;
+  --color-honey-400: #fbbf24;
+  --color-honey-500: #f59e0b;
+  --color-honey-600: #d97706;
+  --color-honey-700: #b45309;
+  
+  /* Premium Sand/Linen Neutrals */
+  --color-sand-50: #fdfdfc;
+  --color-sand-100: #f8f7f4;
+  --color-sand-200: #efede7;
+  --color-sand-300: #dfdbcf;
+  --color-sand-700: #4a4843;
+  --color-sand-900: #201f1d;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-sand-100);
+  color: var(--color-sand-900);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f8f7f4;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbe0d6;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #15803d;
+}
+
+html {
+  scroll-behavior: smooth;
+}
