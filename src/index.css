@@ -5,32 +5,32 @@
   --font-sans: 'Montserrat', sans-serif;
   --font-serif: 'Playfair Display', serif;
   --font-cursive: 'Satisfy', cursive;
-  --color-leaf-50: #f4f8f6;
-  --color-leaf-100: #e5f0eb;
-  --color-leaf-200: #cbe0d6;
-  --color-leaf-500: #14532d;
-  --color-leaf-600: #15803d;
-  --color-leaf-650: #166534;
-  --color-leaf-700: #166534;
-  --color-leaf-800: #14532d;
-  --color-leaf-900: #123e24;
-  --color-leaf-950: #061c10;
+  --color-leaf-50: #fdfbf7;
+  --color-leaf-100: #f5efe6;
+  --color-leaf-200: #e6dcd0;
+  --color-leaf-500: #8b5a2b;
+  --color-leaf-600: #70471c;
+  --color-leaf-650: #5c3a16;
+  --color-leaf-700: #4e310e;
+  --color-leaf-800: #3b2307;
+  --color-leaf-900: #2c1903;
+  --color-leaf-950: #190e01;
 
-  --color-honey-50: #fffbeb;
-  --color-honey-100: #fef3c7;
-  --color-honey-200: #fde68a;
-  --color-honey-300: #fcd34d;
-  --color-honey-400: #fbbf24;
-  --color-honey-500: #f59e0b;
-  --color-honey-600: #d97706;
-  --color-honey-700: #b45309;
+  --color-honey-50: #fdf8eb;
+  --color-honey-100: #fbeec5;
+  --color-honey-200: #f7da8c;
+  --color-honey-300: #f3c453;
+  --color-honey-400: #eeae24;
+  --color-honey-500: #d9822b;
+  --color-honey-600: #b7651a;
+  --color-honey-700: #904a10;
 
-  --color-sand-50: #fdfdfc;
-  --color-sand-100: #f8f7f4;
-  --color-sand-200: #efede7;
-  --color-sand-300: #dfdbcf;
-  --color-sand-700: #4a4843;
-  --color-sand-900: #201f1d;
+  --color-sand-50: #faf5ef;
+  --color-sand-100: #f3e7da;
+  --color-sand-200: #ebdccb;
+  --color-sand-300: #dfcab5;
+  --color-sand-700: #665544;
+  --color-sand-900: #2e2018;
 }
 
 body {
