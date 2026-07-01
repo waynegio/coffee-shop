@@ -31,7 +31,7 @@ export default function About() {
       {/* Brand Intro & Story Section */}
       <section className="grid grid-cols-1 lg:grid-cols-2 border-b border-sand-200/60">
         {/* Left Content Column */}
-        <div className="flex flex-col justify-center py-20 px-8 md:px-16 lg:px-20 bg-white gap-6">
+        <div className="flex flex-col justify-center py-20 px-8 md:px-16 lg:px-20 bg-sand-100 gap-6">
           <div className="flex items-center gap-2">
             <div className="flex text-honey-500">
               <Star size={14} fill="currentColor" />
